@@ -35,6 +35,16 @@ Target Codebase
       ↓
 SECURITY_AUDIT.md + Patched Code Suggestions
 
+## 📦 Installing Dependencies
+
+Cyber-Sentinel depends on several Python libraries such as LangChain and the Groq API client.  
+To install all required dependencies, make sure you have Python 3.11 and run: pip install -r requirements.txt
+
+This command will install all the packages listed in `requirements.txt` so that the project runs correctly.  
+
+
+
+
 ## 🔐 Security & Safety Philosophy
 
 Cyber-Sentinel follows a "trust but verify" approach:
