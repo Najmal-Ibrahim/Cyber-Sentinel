@@ -48,3 +48,11 @@ The system never modifies production code directly.
 
 ## 📸 Demo
 ![Cyber Sentinel Scan Output](cyber_sentinel_output.png)
+
+## 🐳 Docker Deployment
+This project is containerized for production consistency.
+
+### How to Run via Docker:
+1. **Build the Image:**
+   ```bash
+   docker build -t cyber-sentinel .
