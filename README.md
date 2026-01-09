@@ -56,3 +56,10 @@ This project is containerized for production consistency.
 1. **Build the Image:**
    ```bash
    docker build -t cyber-sentinel .
+
+   Run the Container:
+
+   docker run -e GROQ_API_KEY="your_key_here" cyber-sentinel
+
+   Docker Run Output:
+![alt text](day27_docker_proof.png)
