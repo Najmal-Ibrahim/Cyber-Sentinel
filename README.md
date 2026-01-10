@@ -1,3 +1,4 @@
+![Cyber Security Audit](https://github.com/Najmal-Ibrahim/Cyber-Sentinel/actions/workflows/audit.yml/badge.svg)
 # 🚨 Cyber-Sentinel
 **An Autonomous AI-Powered Static Analysis Tool (SAST)**
 
