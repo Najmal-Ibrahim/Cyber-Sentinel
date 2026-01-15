@@ -1,66 +1,71 @@
 ![Cyber Security Audit](https://github.com/Najmal-Ibrahim/Cyber-Sentinel/actions/workflows/audit.yml/badge.svg)
-# 🚨 Cyber-Sentinel
-**An Autonomous AI-Powered Static Analysis Tool (SAST)**
+# 🛡️ Cyber-Sentinel
+AI-Assisted Static Security Analyzer for Python Code
 
-**Cyber-Sentinel** scans Python codebases for OWASP Top 10 vulnerabilities using advanced LLM reasoning and suggests secure patches automatically.
+## 🚀 Overview
+Cyber-Sentinel is an AI-powered static analysis tool that detects
+common security vulnerabilities in Python source code and provides
+context-aware remediation suggestions.
 
----
-
-## 💡 Problem
-Manual code review is slow, error-prone, and often misses tricky security flaws like SQL injection, hardcoded secrets, or unsafe use of user input.
-
-Developers need a tool that not only identifies risks but also *fixes them intelligently*.
-
----
-
-## 🧠 Solution
-Cyber-Sentinel:
-1. Scans local project folders for Python files
-2. Detects security vulnerabilities
-3. Uses LLM reasoning to generate **safe patched code**
-4. Outputs a detailed audit report (with suggested fixes)
-
-This bridges the gap between static scanning and developer-friendly remediation.
+Unlike traditional rule-based scanners, Cyber-Sentinel leverages
+large language models to understand **code intent**, reducing
+false positives and improving detection of logical security flaws.
 
 ---
 
-## 📊 Architecture
+## 🎯 Problem Statement
+Traditional static analysis tools:
+- Generate high false positives
+- Fail to understand business logic
+- Miss context-dependent vulnerabilities
 
-Target Codebase
-      ↓
-[1] Static Scanner
-      ↓
-[2] AI Security Auditor (LLM)
-      ↓
-[3] Controlled Remediation & Report Generator
-      ↓
-SECURITY_AUDIT.md + Patched Code Suggestions
+Cyber-Sentinel addresses this gap by combining:
+- Lightweight static scanning
+- LLM-based semantic analysis
+- Actionable fix suggestions
 
-## 🔐 Security & Safety Philosophy
+---
 
-Cyber-Sentinel follows a "trust but verify" approach:
-- Deterministic rules first
-- AI reasoning second
-- Human-controlled remediation always
+## 🔍 Vulnerabilities Covered
+- Hardcoded secrets
+- Insecure use of `eval()` / `exec()`
+- SQL injection patterns
+- Command injection
+- Weak cryptographic usage
+- Insecure file handling
 
-The system never modifies production code directly.
+---
 
+## 🧠 System Architecture
+1. Source code ingestion
+2. Rule-based pre-scan (baseline)
+3. LLM-assisted semantic analysis
+4. Vulnerability classification
+5. Remediation suggestion generation
 
+---
 
-## 📸 Demo
-![Cyber Sentinel Scan Output](cyber_sentinel_output.png)
+## 🧪 Evaluation Strategy
+Cyber-Sentinel is evaluated using:
+- Precision vs rule-based baseline
+- False positive comparison
+- Manual validation on vulnerable test cases
 
-## 🐳 Docker Deployment
-This project is containerized for production consistency.
+**Goal:** Reduce false positives while maintaining high recall.
 
-### How to Run via Docker:
-1. **Build the Image:**
-   ```bash
-   docker build -t cyber-sentinel .
+---
 
-   Run the Container:
+## 📦 Tech Stack
+- Python
+- LangChain
+- LLaMA-3-70B (via Groq API)
+- Static code parsing (AST)
 
-   docker run -e GROQ_API_KEY="your_key_here" cyber-sentinel
+---
 
-   Docker Run Output:
+## ▶️ How to Run
+```bash
+pip install -r requirements.txt
+python main.py --file test_files/vulnerable.py
+
 ![alt text](day27_docker_proof.png)
